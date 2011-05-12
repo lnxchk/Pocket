@@ -37,7 +37,7 @@ module Lnxchk
         save_list = knife_search.run
         fh = File.open(file, "w")
         save_list.each { |node|
-          x = node["fqdn"]
+          x = node["id"]
           fh.write "#{x} ";
         }
       elsif what == "ssh"
